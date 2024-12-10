@@ -1,0 +1,13 @@
+import pandas as pd
+import pyreadstat
+
+# Load SAS XPT files using pyreadstat
+demographics_data, meta = pyreadstat.read_xport('path_to_demographics_data.xpt')  # Replace with actual file path
+medical_conditions_data, meta = pyreadstat.read_xport('path_to_medical_conditions_data.xpt')  # Replace with actual file path
+
+# View the first few rows to understand the structure
+print("Demographics Data:")
+print(demographics_data.head())
+
+print("\nMedical Conditions Data:")
+print(medical_conditions_data.head())
